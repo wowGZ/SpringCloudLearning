@@ -1,0 +1,18 @@
+server:
+  port: 23301
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 表明自己是注册中心，不需要进行注册和获取注册信息
+    register-with-eureka: false
+    fetch-registry: false
+    # 设置注册中心界面访问URL
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+spring:
+  application:
+    name: eureka-server
+

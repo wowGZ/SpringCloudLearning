@@ -1,0 +1,11 @@
+server:
+  port: 23303
+
+spring:
+  application:
+    name: server-test
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:23301/eureka/
